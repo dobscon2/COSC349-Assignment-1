@@ -20,6 +20,7 @@ $movieDirector = $row[ "movieDirector" ];
 <head>
 <meta charset="utf-8">
 <title>Otago Cinema</title>
+<link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -27,7 +28,7 @@ $movieDirector = $row[ "movieDirector" ];
 <?php
 echo "<h2>" . $movieName . "</h2>";
 ?>
-<table width="200" border="1">
+<table>
   <tbody>
     <tr>
       <td>Year Released</td>
@@ -40,7 +41,7 @@ echo "<h2>" . $movieName . "</h2>";
   </tbody>
 </table>
 <h2>Available sessions</h2>
-<table width="500" border="1">
+<table>
   <tbody>
     <tr>
       <th> Cinema Room</th>
@@ -49,10 +50,11 @@ echo "<h2>" . $movieName . "</h2>";
     <?php
     $q = $pdo->query( "SELECT * FROM cinemaSessions WHERE movieName = '" . $movieName . "' && movieYear = '" . $movieYear . "'" );
     while ( $row = $q->fetch() ) {
-      echo "<tr><td>" . $row[ "cinemaRoom" ] . "</td><td><a href='booking.php?sessionID=".$row["sessionID"]."'>" . $row[ "sessionDateTime" ] . "</a></td></tr>";
+      echo "<tr><td>" . $row[ "cinemaRoom" ] . "</td><td><a href='booking.php?sessionID=" . $row[ "sessionID" ] . "'>" . $row[ "sessionDateTime" ] . "</a></td></tr>";
     }
     ?>
   </tbody>
 </table>
+<a href="index.php">Go back to homepage</a>
 </body>
 </html>

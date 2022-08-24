@@ -1,0 +1,25 @@
+@charset "utf-8";
+h1 {
+    text-align: center;
+}
+body {
+    font-family: Verdana, sans-serif;
+}
+
+h1 + p {
+    text-align: center;
+}
+td {
+    padding: 10px;
+}
+form {
+    padding: 10px;
+}
+ul {
+    list-style: none;
+}
+ul li {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}

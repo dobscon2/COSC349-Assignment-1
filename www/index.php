@@ -3,12 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Otago Cinema</title>
+<link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <h1>Otago Cinema</h1>
-<div>
-  <p>Welcome to Otago Cinema, we offer many movies for your viewing pleasure.</p>
-</div>
+<p>Welcome to Otago Cinema, we offer many movies for your viewing pleasure.</p>
 <h2>Current Movies Available</h2>
 <p>Please select a movie to booking a session</p>
 <ul>
