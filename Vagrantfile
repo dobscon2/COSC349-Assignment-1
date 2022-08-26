@@ -59,6 +59,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "posserver" do |posserver|
     posserver.vm.hostname = "posserver"
+    posserver.vm.network "forwarded_port", guest: 80, host: 8181, host_ip: "127.0.0.1"
     posserver.vm.network "private_network", ip: "192.168.56.13"
     posserver.vm.synced_folder ".", "/vagrant", owner: "vagrant", group: "vagrant", mount_options: ["dmode=775,fmode=777"]
 
